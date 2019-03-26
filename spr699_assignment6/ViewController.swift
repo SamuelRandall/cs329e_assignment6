@@ -1,12 +1,13 @@
 //
 //  ViewController.swift
-//  group22_assignment6
+//  spr699_assignment6
 //
-//  Created by Jorge Rivero III on 3/11/19.
-//  Copyright © 2019 cs329e. All rights reserved.
+//  Created by Samuel Randall on 3/13/19.
+//  Copyright © 2019 Samuel Randall. All rights reserved.
 //
 
 import UIKit
+
 
 class ViewController: UIViewController {
 
@@ -14,7 +15,5 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
 }
 
