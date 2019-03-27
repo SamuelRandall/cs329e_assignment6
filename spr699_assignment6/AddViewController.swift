@@ -12,7 +12,7 @@ import CoreData
 class AddViewController: UIViewController {
 
     
-    //var list: [NSManagedObject] = []
+//    var list: [NSManagedObject] = []
 
     
     override func viewDidLoad() {
@@ -25,15 +25,21 @@ class AddViewController: UIViewController {
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var classText: UITextField!
     
+    
     @IBAction func save(_ sender: UIButton) {
-        let name = String(nameText.text ?? "")
-        let profession = String(classText.text ?? "")
+        
+        let name = nameText.text ?? ""
+        let profession = classText.text ?? ""
+        
         if (name != "") && (profession != ""){
             let hp = Int.random(in: 0 ... 10)
             let att = Float.random(in: 0 ... 10)
             self.addAdv(name: name, profession: profession, level: 1, HP: hp, attack: att)
         }
+        
     }
+    
+    
     func addAdv(name: String, profession: String, level: Int, HP: Int, attack: Float) {
         
         
@@ -58,11 +64,15 @@ class AddViewController: UIViewController {
         adv.setValue(level, forKey: "level")
         adv.setValue(HP, forKey: "totalHP")
         adv.setValue(attack, forKey: "attack")
+        
         do {
             try managedContext.save()
-            list.append(adv)
+//            list.append(adv)
+            print("is saved")
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
+        } catch {
+            print(error.localizedDescription)
         }
     }
         

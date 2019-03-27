@@ -11,11 +11,12 @@ import CoreData
 
 
 class AdventurersTableViewController: UITableViewController {
-
+    
+    var list: [NSManagedObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Adv")
+        self.tableView.register(TableViewCell.self, forCellReuseIdentifier: "Adv")
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -28,11 +29,19 @@ class AdventurersTableViewController: UITableViewController {
             appDelegate.persistentContainer.viewContext
         let fetchRequest =
             NSFetchRequest<NSManagedObject>(entityName: "Adventurer")
+        var response: [NSManagedObject]? = nil
+        
         do {
-            list = try managedContext.fetch(fetchRequest)
+            response = try managedContext.fetch(fetchRequest)
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
+        
+        if let response = response {
+            self.list = response
+            
+        }
+        self.tableView.reloadData()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -55,10 +64,11 @@ class AdventurersTableViewController: UITableViewController {
             //cell.imageView?.image = UIImage(named: headline.name)
             //cell.textLabel?.text = adv.value(forKeyPath: "name") as? String
             cell.nameLabel?.text = adv.value(forKeyPath: "name") as? String
-            cell.professionLabel.text = adv.value(forKeyPath: "profession") as? String
+            cell.professionLabel?.text = adv.value(forKeyPath: "profession") as? String
             cell.levelLabel?.text = adv.value(forKeyPath: "level") as? String
             cell.HPLabel?.text = adv.value(forKeyPath: "totalHP") as? String
             cell.attackLabel?.text = adv.value(forKeyPath: "attack") as? String
+            
             return cell
     }
 

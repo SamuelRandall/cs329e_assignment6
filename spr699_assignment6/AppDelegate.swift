@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-var list: [NSManagedObject] = []
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

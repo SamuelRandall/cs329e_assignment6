@@ -57,9 +57,6 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="classText:" destination="V2H-8M-k2h" eventType="editingDidEnd" id="5BT-G0-VnC"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -142,6 +139,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XFy-zJ-fNR"/>
                     </view>
+                    <connections>
+                        <outlet property="classText" destination="YhM-9e-YGS" id="viB-og-9Hz"/>
+                        <outlet property="nameText" destination="W1E-s7-B8W" id="eDX-51-CcD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BHU-n8-2g6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -220,7 +221,7 @@
                                             <outlet property="attackLabel" destination="pQK-KE-JZa" id="aHU-Oe-cHc"/>
                                             <outlet property="levelLabel" destination="Dwy-fm-9dP" id="nOp-aH-uDR"/>
                                             <outlet property="nameLabel" destination="Ofr-XE-ZC9" id="Tat-c2-Uad"/>
-                                            <outlet property="professionLabel" destination="I91-i4-eQO" id="z0W-yb-RbK"/>
+                                            <outlet property="professionLabel" destination="I91-i4-eQO" id="2G8-UF-doY"/>
                                             <segue destination="9nA-ND-kOP" kind="show" id="ob3-6N-9Lu"/>
                                         </connections>
                                     </tableViewCell>
@@ -239,6 +240,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="ceM-1U-rVh" id="pRN-a2-lhV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SS7-qG-8st" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -392,7 +396,6 @@
         <image name="warrior" width="260" height="460"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zEA-cu-MTw"/>
         <segue reference="bMZ-wh-ac9"/>
     </inferredMetricsTieBreakers>
 </document>
