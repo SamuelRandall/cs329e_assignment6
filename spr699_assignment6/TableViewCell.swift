@@ -10,6 +10,8 @@ import UIKit
 
 
 class TableViewCell: UITableViewCell {
+    
+    static let identifier = "TableViewCell"
 
     @IBOutlet weak var professionLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -17,7 +19,6 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var attackLabel: UILabel!
     @IBOutlet weak var HPLabel: UILabel!
     @IBOutlet weak var advImage: UIImageView!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()

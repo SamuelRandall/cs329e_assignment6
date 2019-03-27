@@ -9,22 +9,20 @@
 import UIKit
 import CoreData
 
+protocol AddAdventurerDelegate {
+    func addAdventurer(name: String, profession: String, level: Int, HP: Int, attack: Float)
+}
+
 class AddViewController: UIViewController {
-
-    
-//    var list: [NSManagedObject] = []
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
- 
+     
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var classText: UITextField!
     
+    var delegate: AddAdventurerDelegate? = nil
+    
+    @IBAction func cancel(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func save(_ sender: UIButton) {
         
@@ -34,50 +32,11 @@ class AddViewController: UIViewController {
         if (name != "") && (profession != ""){
             let hp = Int.random(in: 0 ... 10)
             let att = Float.random(in: 0 ... 10)
-            self.addAdv(name: name, profession: profession, level: 1, HP: hp, attack: att)
+            delegate?.addAdventurer(name: name, profession: profession, level: 1, HP: hp, attack: att)
+            navigationController?.popViewController(animated: true)
         }
         
     }
-    
-    
-    func addAdv(name: String, profession: String, level: Int, HP: Int, attack: Float) {
-        
-        
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return
-        }
-        
-        let managedContext =
-            appDelegate.persistentContainer.viewContext
-        
-        let entity =
-            NSEntityDescription.entity(forEntityName: "Adventurer",
-                                       in: managedContext)!
-
-        let adv = NSManagedObject(entity: entity,
-                                     insertInto: managedContext)
-        
-        
-        adv.setValue(name, forKey: "name")
-        adv.setValue(profession, forKey: "profession")
-        adv.setValue(level, forKey: "level")
-        adv.setValue(HP, forKey: "totalHP")
-        adv.setValue(attack, forKey: "attack")
-        
-        do {
-            try managedContext.save()
-//            list.append(adv)
-            print("is saved")
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-        
-        
-
     
 
     /*
