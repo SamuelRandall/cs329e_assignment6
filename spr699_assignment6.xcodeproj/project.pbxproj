@@ -8,40 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		62EFF0CF22390926001EAE31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EFF0CE22390926001EAE31 /* AppDelegate.swift */; };
-<<<<<<< HEAD
-		62EFF0D122390926001EAE31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EFF0D022390926001EAE31 /* ViewController.swift */; };
-=======
->>>>>>> 3fbf443440446c40e9079a4e64fd62c6acca881e
 		62EFF0D422390926001EAE31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62EFF0D222390926001EAE31 /* Main.storyboard */; };
 		62EFF0D722390926001EAE31 /* spr699_assignment6.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62EFF0D522390926001EAE31 /* spr699_assignment6.xcdatamodeld */; };
 		62EFF0D922390928001EAE31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62EFF0D822390928001EAE31 /* Assets.xcassets */; };
 		62EFF0DC22390928001EAE31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62EFF0DA22390928001EAE31 /* LaunchScreen.storyboard */; };
-<<<<<<< HEAD
-=======
 		699CDD0F2247E57D00290245 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CDD0E2247E57D00290245 /* AddViewController.swift */; };
 		699CDD112247F39900290245 /* AdventurersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CDD102247F39900290245 /* AdventurersTableViewController.swift */; };
 		699CDD1D224ABA8D00290245 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CDD1C224ABA8D00290245 /* TableViewCell.swift */; };
->>>>>>> 3fbf443440446c40e9079a4e64fd62c6acca881e
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		62EFF0CB22390926001EAE31 /* spr699_assignment6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spr699_assignment6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62EFF0CE22390926001EAE31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		62EFF0D022390926001EAE31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-=======
->>>>>>> 3fbf443440446c40e9079a4e64fd62c6acca881e
 		62EFF0D322390926001EAE31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62EFF0D622390926001EAE31 /* spr699_assignment6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = spr699_assignment6.xcdatamodel; sourceTree = "<group>"; };
 		62EFF0D822390928001EAE31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62EFF0DB22390928001EAE31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62EFF0DD22390928001EAE31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-<<<<<<< HEAD
-=======
 		699CDD0E2247E57D00290245 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		699CDD102247F39900290245 /* AdventurersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventurersTableViewController.swift; sourceTree = "<group>"; };
 		699CDD1C224ABA8D00290245 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
->>>>>>> 3fbf443440446c40e9079a4e64fd62c6acca881e
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,21 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				62EFF0CE22390926001EAE31 /* AppDelegate.swift */,
-<<<<<<< HEAD
-				62EFF0D022390926001EAE31 /* ViewController.swift */,
-=======
->>>>>>> 3fbf443440446c40e9079a4e64fd62c6acca881e
 				62EFF0D222390926001EAE31 /* Main.storyboard */,
 				62EFF0D822390928001EAE31 /* Assets.xcassets */,
 				62EFF0DA22390928001EAE31 /* LaunchScreen.storyboard */,
 				62EFF0DD22390928001EAE31 /* Info.plist */,
 				62EFF0D522390926001EAE31 /* spr699_assignment6.xcdatamodeld */,
-<<<<<<< HEAD
-=======
 				699CDD0E2247E57D00290245 /* AddViewController.swift */,
 				699CDD102247F39900290245 /* AdventurersTableViewController.swift */,
 				699CDD1C224ABA8D00290245 /* TableViewCell.swift */,
->>>>>>> 3fbf443440446c40e9079a4e64fd62c6acca881e
 			);
 			path = spr699_assignment6;
 			sourceTree = "<group>";
@@ -165,17 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-				62EFF0D722390926001EAE31 /* spr699_assignment6.xcdatamodeld in Sources */,
-				62EFF0D122390926001EAE31 /* ViewController.swift in Sources */,
-				62EFF0CF22390926001EAE31 /* AppDelegate.swift in Sources */,
-=======
 				699CDD1D224ABA8D00290245 /* TableViewCell.swift in Sources */,
 				62EFF0D722390926001EAE31 /* spr699_assignment6.xcdatamodeld in Sources */,
 				699CDD112247F39900290245 /* AdventurersTableViewController.swift in Sources */,
 				62EFF0CF22390926001EAE31 /* AppDelegate.swift in Sources */,
 				699CDD0F2247E57D00290245 /* AddViewController.swift in Sources */,
->>>>>>> 3fbf443440446c40e9079a4e64fd62c6acca881e
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
