@@ -5,7 +5,6 @@
 //  Created by Slijepcevic, Milica on 3/24/19.
 //  Copyright © 2019 Samuel Randall. All rights reserved.
 //
-
 import UIKit
 import CoreData
 
@@ -13,7 +12,7 @@ import CoreData
 class AdventurersTableViewController: UITableViewController, AddAdventurerDelegate {
     
     var list: [NSManagedObject] = []
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
@@ -35,7 +34,7 @@ class AdventurersTableViewController: UITableViewController, AddAdventurerDelega
         }
         
     }
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections
         return 1
@@ -46,7 +45,7 @@ class AdventurersTableViewController: UITableViewController, AddAdventurerDelega
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
+        
         let adv = list[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as! TableViewCell
@@ -62,7 +61,7 @@ class AdventurersTableViewController: UITableViewController, AddAdventurerDelega
         
         return cell
     }
-
+    
     func addAdventurer(name: String, profession: String, level: Int, HP: Int, attack: Float) {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
@@ -86,7 +85,6 @@ class AdventurersTableViewController: UITableViewController, AddAdventurerDelega
             
             list.append(adv)
             tableView.reloadData()
-            s
             print("is saved")
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
